@@ -105,7 +105,7 @@ namespace MsgReader.Outlook
                         // multiply the outcome with 8
                         var identValue = ushort.Parse(propertyIdent, NumberStyles.HexNumber);
                         var entryOffset = (identValue - 32768)*8;
-                        if (entryOffset > entryStreamBytes.Length) continue;
+                        if (entryOffset >= entryStreamBytes.Length) continue;
 
                         string entryIdentString;
 
